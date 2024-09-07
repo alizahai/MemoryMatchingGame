@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chewy-regular {
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  min-height: 100vh;
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainSection .main-heading {
+  font-family: "Indie Flower", cursive;
+  font-size: 48px;
+}
+
+.mainSection .play-icon {
+  margin-top: 80px;
+  height: 60px;
+  width: 100px;
+  background-color: red;
+  border: 1px solid rgb(171, 5, 5);
+  border-radius: 10px;
+  color: white;
+  font-size: 28px;
+  font-family: "Permanent Marker", cursive;
+  cursor: pointer;
+}
+
+.play-icon:hover {
+  background-color: rgb(239, 4, 4);
+  font-weight: bold;
+}
+
+.popup {
+  width: 400px;
+  background-color: #88d66c;
+  border-radius: 3mm;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: fixed;
+  visibility: hidden;
+}
+
+.popup img {
+  padding-top: 20px;
+}
+
+.popup button {
+  background-color: #fff;
+  border: 1px solid #00712d;
+  color: #00712d;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+  margin-left: 25%;
+}
+
+.popup button:hover {
+  background-color: #fff;
+  border: 2px solid #00712d;
+  color: #00712d;
+  display: block;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.startMain {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Permanent Marker", cursive;
+}
+
+.startMain #score {
+  text-align: center;
+  font-size: 24px;
+}
+
+.startMain #timer {
+  text-align: center;
+  font-size: 24px;
+}
+
+.startMain #startbtn {
+  padding: 10px 10px;
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+  font-family: "Permanent Marker", cursive;
+  font-size: 16px;
+  border: 1px solid rgb(171, 5, 5);
+  border-radius: 10px;
+}
+
+#startbtn:hover {
+  background-color: rgb(239, 4, 4);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#game-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  background-color: #fb7f7f;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#game-container .card {
+  width: 100px;
+  height: 100px;
+  background-color: #ffaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+}
+
+@keyframes scaleAndFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+}
+
+#game-container .matched {
+  animation: scaleAndFade 0.8s forwards;
+}

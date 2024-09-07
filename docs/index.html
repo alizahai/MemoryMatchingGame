@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Matching Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="startMain" style="display: none">
+        <p id="score">Score: 0</p>
+        <p id="timer">Time Left: 60</p>
+        <button id="startbtn">Start/Restart</button>
+      </div>
+      <div id="game-container" style="display: none">
+        <!-- Cards will be generated dynamically using JavaScript -->
+      </div>
+      <div class="mainSection">
+        <h1 class="main-heading" id="main-heading">Memory Matching Game</h1>
+        <button class="play-icon" id="play-icon">Play</button>
+      </div>
+      <div class="popup">
+        <img src="images/stopwatch.png" height="100" />
+        <h3>Game Time: 60 s</h3>
+        <button id="popup-start-btn">Start</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
