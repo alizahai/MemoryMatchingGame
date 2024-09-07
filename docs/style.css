@@ -170,3 +170,10 @@
 #game-container .matched {
   animation: scaleAndFade 0.8s forwards;
 }
+
+@media screen and (max-width: 450px) {
+  #game-container {
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+  }
+}
